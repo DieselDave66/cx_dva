@@ -1,0 +1,37 @@
+command: ["uvicorn", "app:app"]
+
+env:
+  - name: 'DATABRICKS_CATALOG'
+    value: 'az_southcentralus_na_prod_rcs_databricks_467224035551493'
+  - name: 'DATABRICKS_SCHEMA'
+    value: 'rcs_device_curated'
+  - name: "DATABRICKS_TABLE_MODE"
+    value: 'rcs_da_mode_curated'
+  - name: "DATABRICKS_TABLE_USAGE"
+    value: 'usage'
+
+  - name: 'DATABRICKS_TABLE_1MIN'
+    value: 'rcs_da_1min_curated'
+  - name: 'DATABRICKS_TABLE_5MIN'
+    value: 'rcs_da_5min_curated'
+  - name: 'DATABRICKS_TABLE_15MIN'
+    value: 'rcs_da_15min_curated'
+  - name: 'DATABRICKS_TABLE_1HOUR'
+    value: 'rcs_da_1hr_curated'
+  - name: 'DATABRICKS_TABLE_6HOUR'
+    value: 'rcs_da_6hr_curated'
+  - name: 'DATABRICKS_TABLE_1DAY'
+    value: 'rcs_da_daily_curated'
+  - name: 'DATABRICKS_TABLE_1WEEK'
+    value: 'rcs_da_weekly_curated'
+
+  - name: 'DB_POOL_SIZE'
+    value: '5'
+  - name: 'DB_MAX_OVERFLOW'
+    value: '10'
+  - name: 'DB_COMMAND_TIMEOUT'
+    value: '30'
+  - name: 'DB_POOL_TIMEOUT'
+    value: '10'
+  - name: 'DB_POOL_RECYCLE_INTERVAL'
+    value: '3600'
